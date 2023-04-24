@@ -11,6 +11,7 @@ describe("First Test", () => {
 
   it("Make the login", () => {
     cy.visit("http://localhost:49297/");
+    cy.get("[data-test-id='login-form']").parents().find("h1");
     cy.get("[data-test-id='login-form'] input[formControlName='email']")
       .type("nicolas@mail.com")
       .should("have.value", "nicolas@mail.com");
