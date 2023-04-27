@@ -39,7 +39,7 @@ describe("Saving Elements", () => {
     cy.visit("http://localhost:49297/");
     cy.get("form").then((form) => {
       const inputs = form.find("input");
-      expect(inputs.length).to.eq(2);
+      expect(inputs.length).to.equal(2);
 
       // Si queremos que este elemento de Jquery se vuelva un elemento de cypress debemos de usar wrap
       //cy.wrap(inputs).should("have.length", 15);
